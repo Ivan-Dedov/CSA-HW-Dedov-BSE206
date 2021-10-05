@@ -1,3 +1,15 @@
+## Getting started (HW1)
+
+Report for this homework is in the file titled **REPORT.md**.
+
+The source codes for this homework are in this directory (**HW1\\**).
+
+The test files are in the folder titled **tests**.
+
+The results of these tests are in the folder titled **outputs**. Notice that there are some absent files, since the program does not generate a file for an incorrect input.
+
+
+
 ## Launching the program
 
 To launch the program, use this command: ```PROGRAM_NAME <TAG>```
