@@ -26,9 +26,9 @@
 | - | - |
 | int | 4 |
 | char | 1 |
-| **struct animal** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;food_source: enum <br/>} | 4 \[0\] |
+| **struct animal** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;food_source: enum { CARNIVORE, HERBIVORE, INSECTIVORE, OMNIVORE } <br/>} | 4 \[0\] |
 | **struct bird** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;does_migrate: int <br/>} | 4 \[0\] |
-| **struct fish** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;habitat: enum <br/>} | 4 \[0\] |
+| **struct fish** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;habitat: enum { LAKE, OCEAN, SEA } <br/>} | 4 \[0\] |
 | **struct creature** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;name: char\[64\] <br/>&nbsp;&nbsp;&nbsp;&nbsp;weight: int <br/>&nbsp;&nbsp;&nbsp;&nbsp;creature_type: int <br/>&nbsp;&nbsp;&nbsp;&nbsp;specification: **union** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;animal: animal <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bird: bird <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fish: fish <br/>&nbsp;&nbsp;&nbsp;&nbsp;} <br/>} | **76** <br/> 64 \[0\] <br/> 4 \[64\] <br/> 4 \[68\] <br/><br/> 4 \[72\] <br/> 4 \[72\] <br/> 4 \[72\] <br/><br/><br/> |
 
 ### Глобальная память
