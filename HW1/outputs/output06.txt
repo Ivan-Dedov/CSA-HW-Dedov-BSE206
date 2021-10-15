@@ -1,1 +1,5 @@
-A_very_very_very_very_very_very_very_very_very_very_very_very_ve 1 1 1
+Data contains 1 creatures:
+ANIMAL { name = "A_very_very_very_very_very_very_very_very_very_very_very_very_ve", weight = 1, food_source = CARNIVORE }
+
+Sorted data of 1 creatures:
+ANIMAL { name = "A_very_very_very_very_very_very_very_very_very_very_very_very_ve", weight = 1, food_source = CARNIVORE }

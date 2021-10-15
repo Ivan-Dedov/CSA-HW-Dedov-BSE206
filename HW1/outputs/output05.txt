@@ -1,1 +1,5 @@
-OneCreatureTest 1 1 1
+Data contains 1 creatures:
+ANIMAL { name = "OneCreatureTest", weight = 1, food_source = CARNIVORE }
+
+Sorted data of 1 creatures:
+ANIMAL { name = "OneCreatureTest", weight = 1, food_source = CARNIVORE }

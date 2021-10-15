@@ -1,6 +1,15 @@
-George_The_Parrot 400 2 0
-Lenny_The_Lion 100000 1 1
-Patty_The_Cat 10000 1 1
-Liam_The_Rhinoceros 300000 1 2
-Quaily 200 3 2
-Barry_Nightingale 250 2 1
+Data contains 6 creatures:
+BIRD { name = "George_The_Parrot", weight = 400, does_migrate = FALSE }
+ANIMAL { name = "Lenny_The_Lion", weight = 100000, food_source = CARNIVORE }
+ANIMAL { name = "Patty_The_Cat", weight = 10000, food_source = CARNIVORE }
+ANIMAL { name = "Liam_The_Rhinoceros", weight = 300000, food_source = HERBIVORE }
+FISH { name = "Quaily", weight = 200, habitat = RIVER }
+BIRD { name = "Barry_Nightingale", weight = 250, does_migrate = TRUE }
+
+Sorted data of 6 creatures:
+BIRD { name = "Barry_Nightingale", weight = 250, does_migrate = TRUE }
+BIRD { name = "George_The_Parrot", weight = 400, does_migrate = FALSE }
+FISH { name = "Quaily", weight = 200, habitat = RIVER }
+ANIMAL { name = "Patty_The_Cat", weight = 10000, food_source = CARNIVORE }
+ANIMAL { name = "Lenny_The_Lion", weight = 100000, food_source = CARNIVORE }
+ANIMAL { name = "Liam_The_Rhinoceros", weight = 300000, food_source = HERBIVORE }

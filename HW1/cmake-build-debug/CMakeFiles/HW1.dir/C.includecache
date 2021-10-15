@@ -10,6 +10,14 @@ C:/Studies/CSA/HW1/animal.h
 
 C:/Studies/CSA/HW1/bird.h
 
+C:/Studies/CSA/HW1/creature.c
+stdlib.h
+-
+string.h
+-
+creature.h
+C:/Studies/CSA/HW1/creature.h
+
 C:/Studies/CSA/HW1/creature.h
 stdio.h
 -
@@ -20,29 +28,5 @@ C:/Studies/CSA/HW1/bird.h
 fish.h
 C:/Studies/CSA/HW1/fish.h
 
-C:/Studies/CSA/HW1/data_loader.h
-creature.h
-C:/Studies/CSA/HW1/creature.h
-
 C:/Studies/CSA/HW1/fish.h
-
-C:/Studies/CSA/HW1/heap_sort.h
-creature.h
-C:/Studies/CSA/HW1/creature.h
-
-C:/Studies/CSA/HW1/main.c
-stdio.h
--
-stdlib.h
--
-time.h
--
-string.h
--
-creature.h
-C:/Studies/CSA/HW1/creature.h
-data_loader.h
-C:/Studies/CSA/HW1/data_loader.h
-heap_sort.h
-C:/Studies/CSA/HW1/heap_sort.h
 
