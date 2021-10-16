@@ -33,6 +33,7 @@
 | **class Fish : public Creature** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;name_: std::string<br/>&nbsp;&nbsp;&nbsp;&nbsp;weight_: int<br/>&nbsp;&nbsp;&nbsp;&nbsp;habitat_ : enum Habitat<br/>&nbsp;&nbsp;&nbsp;&nbsp;food_source_names_: static const char\*\[\] <br/> } | 24 \[0\]<br/>4 \[24\]<br/>4 \[28\]<br/><br/> |
 | **class CreatureArray** { <br/>&nbsp;&nbsp;&nbsp;&nbsp;data_: Creature\*\*<br/>&nbsp;&nbsp;&nbsp;&nbsp;size_: int <br/>&nbsp;&nbsp;&nbsp;&nbsp;kMaxSize: static const int <br/> } | 4 \[0\] <br/> 4 \[4\] <br/> 4 \[8\] <br/> |
 
+Экземпляры классов **Animal**, **Bird** и **Fish** хранятся в куче и занимают 40 байт.
 
 ### Глобальная память
 Не используется.
@@ -41,7 +42,7 @@
 
 #### Детальная память методов
 
-##### ```main(int argc, char **argv)```
+##### ```int main(int argc, char **argv)```
 
 | Переменная | Занимаемая память (в байтах) \[индекс в памяти\] |
 | - | - |
@@ -57,6 +58,57 @@
 | "output.txt" |
 | creatures (экземпляр класса **CreatureArray**) |
 | Элементы, хранящиеся в массиве **data_** экземпляра класса **CreatureArray** |
+
+##### ```void CreatureArray::fillFromFile(char *filename)```
+
+| Переменная | Занимаемая память (в байтах) \[индекс в памяти\] |
+| - | - |
+| filename: char* | 4 \[0\] |
+| input_file: std::ifstream | 184 \[4\] |
+| creature_name: std::string | 28 \[188\] |
+| weight: int | 4 \[216\] |
+| creature_type: int | 4 \[220\] |
+| additional_parameter: int | 4 \[224\] |
+| index: int | 4 \[228\] |
+
+| Информация в куче |
+| - |
+| Элементы, создающиеся внутри условного блока и присваивающиеся значениям массива **data_** экземпляра класса **CreatureArray** |
+
+##### ```void CreatureArray::generateRandomly(int count)```
+
+| Переменная | Занимаемая память (в байтах) \[индекс в памяти\] |
+| - | - |
+| count: int | 4 \[0\] |
+| min: int | 4 \[4\] |
+| rd: std::random_device | 1 \[8\] |
+| gen: std::mt19937 | 5000 \[9\] |
+
+| Информация в куче |
+| - |
+| Животные, создающиеся в результате вызова метода ```generateCreature``` |
+
+##### ```Creature *generateCreature(int index, std::mt19937 *gen)```
+
+| Переменная | Занимаемая память (в байтах) \[индекс в памяти\] |
+| - | - |
+| creature_type_generator: std::uniform_int_distribution | 8 \[0\] |
+| weight_generator: std::uniform_int_distribution | 8 \[8\] |
+| food_source_generator: std::uniform_int_distribution | 8 \[16\] |
+| does_migrate_generator: std::uniform_int_distribution | 8 \[24\] |
+| habitat_generator: std::uniform_int_distribution | 8 \[32\] |
+| creature_type: int | 4 \[40\] |
+| name: std::string | 28 \[44\] |
+| weight: int | 4 \[72\] |
+| animal: Animal\* <sup>i</sup> | 4 \[76\] |
+| bird: Bird\* <sup>i</sup> | 4 \[76\] |
+| fish: Fish\* <sup>i</sup> | 4 \[76\] |
+
+<sup>i</sup> Создается только один из экземпляров животного. Все зависит от числа, сгенерированного в ```creature_type_generator```.
+
+| Информация в куче |
+| - |
+| Экземпляры классов **Animal**, **Bird** и **Fish** |
 
 #### Стек вызовов
 
