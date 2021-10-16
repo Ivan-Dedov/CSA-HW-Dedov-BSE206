@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <random>
@@ -6,7 +5,6 @@
 
 #include "Animal.h"
 #include "Bird.h"
-#include "Creature.h"
 #include "CreatureArray.h"
 #include "Fish.h"
 
@@ -35,8 +33,17 @@ void CreatureArray::fillFromFile(char *filename) {
     // While there are still lines of code, read and parse the information into creatures.
     // If not possible, exit and output an error to the console.
     while (!input_file.eof()) {
-        input_file >> creature_name >> weight >> creature_type >> additional_parameter;
+        if (!(input_file >> creature_name >> weight >> creature_type >> additional_parameter)) {
+            std::cout << "Error when reading file \"" << filename << "\".\n";
+            exit(-103);
+        }
+
         if (creature_type == 1) {
+            if (additional_parameter < 1 || additional_parameter > 4) {
+                std::cout << "Incorrect animal food source: " << additional_parameter << ".\n";
+                exit(-105);
+            }
+
             data_[index] = new Animal(&creature_name,
                                       weight,
                                       static_cast<FoodSource>(additional_parameter));
@@ -45,6 +52,11 @@ void CreatureArray::fillFromFile(char *filename) {
                                     weight,
                                     additional_parameter);
         } else if (creature_type == 3) {
+            if (additional_parameter < 1 || additional_parameter > 3) {
+                std::cout << "Incorrect fish habitat: " << additional_parameter << ".\n";
+                exit(-104);
+            }
+
             data_[index] = new Fish(&creature_name,
                                     weight,
                                     static_cast<Habitat>(additional_parameter));
@@ -144,31 +156,31 @@ void CreatureArray::swap(int first_index, int second_index) {
     data_[second_index] = temp;
 }
 
-void CreatureArray::heapify(int index) {
+void CreatureArray::heapify(int length, int index) {
     int smallest = index;
     int left = 2 * index + 1;
     int right = 2 * index + 2;
 
-    if (left < size_ && data_[left] < data_[smallest])
+    if (left < length && (*data_[left] < *data_[smallest])) {
         smallest = left;
-
-    if (right < size_ && data_[right] < data_[smallest])
+    }
+    if (right < length && (*data_[right] < *data_[smallest])) {
         smallest = right;
+    }
 
     if (smallest != index) {
         swap(index, smallest);
-        heapify(smallest);
+        heapify(length, smallest);
     }
 }
 
 void CreatureArray::heapSortDescending() {
-    // todo
     for (int i = size_ / 2 - 1; i >= 0; i--) {
-        heapify(i);
+        heapify(size_, i);
     }
 
     for (int i = size_ - 1; i >= 0; i--) {
         swap(0, i);
-        heapify(0);
+        heapify(i, 0);
     }
 }

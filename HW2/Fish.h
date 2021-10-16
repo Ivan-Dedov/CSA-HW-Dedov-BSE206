@@ -34,8 +34,6 @@ public:
      */
     Fish(std::string *name, int weight, Habitat habitat);
 
-    Fish *clone() override;
-
     std::string toString() override;
 };
 

@@ -1,6 +1,3 @@
-#include <string>
-#include <typeinfo>
-
 #include "Creature.h"
 
 
@@ -13,16 +10,18 @@ double Creature::getMetric() {
     return name_char_sum / weight_;
 }
 
-std::string Creature::toString() {
-    return "CREATURE { metric = " + std::to_string(getMetric()) +
-           "; name = \"" + name_ + "\"" +
-           "; weight = " + std::to_string(weight_) + " }";
+bool Creature::operator<(Creature &other) {
+    return this->getMetric() < other.getMetric();
 }
 
-Creature *Creature::clone() {
-    return nullptr;
+bool Creature::operator>(Creature &other) {
+    return this->getMetric() > other.getMetric();
 }
 
-bool Creature::operator<(Creature *other) {
-    return this->getMetric() < other->getMetric();
+bool Creature::operator==(Creature &other) {
+    return this->getMetric() == other.getMetric();
+}
+
+bool Creature::operator!=(Creature &other) {
+    return this->getMetric() != other.getMetric();
 }

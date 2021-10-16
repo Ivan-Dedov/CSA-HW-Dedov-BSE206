@@ -23,7 +23,7 @@ public:
      * The static array of string values for the names of food sources of Animals.
      * Used when converting the enum values from integer to string form.
      */
-    static const char* food_source_names_[];
+    static const char *food_source_names_[];
 
     /**
      * Creates a new instance of Animal.
@@ -33,8 +33,6 @@ public:
      * @param foodSource The food source that the animal uses.
      */
     Animal(std::string *name, int weight, FoodSource foodSource);
-
-    Animal *clone() override;
 
     std::string toString() override;
 };

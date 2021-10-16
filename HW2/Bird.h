@@ -2,6 +2,8 @@
 #define HW2_BIRD_H
 
 
+#include <string>
+
 #include "Creature.h"
 
 
@@ -24,8 +26,6 @@ public:
      * @param doesMigrate true, if the bird is migratory; false, otherwise.
      */
     Bird(std::string *name, int weight, bool doesMigrate);
-
-    Bird *clone() override;
 
     std::string toString() override;
 };

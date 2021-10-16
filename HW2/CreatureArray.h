@@ -31,9 +31,10 @@ private:
     /**
      * Makes heaps for the heap sort.
      *
+     * @param length The length of the array to heapify.
      * @param index The index of the current element.
      */
-    void heapify(int index);
+    void heapify(int length, int index);
 
 public:
     /**

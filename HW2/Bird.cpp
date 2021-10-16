@@ -1,3 +1,5 @@
+#include <string>
+
 #include "Bird.h"
 
 
@@ -5,10 +7,6 @@ Bird::Bird(std::string *name, int weight, bool doesMigrate) {
     name_ = *name;
     weight_ = weight;
     doesMigrate_ = doesMigrate;
-}
-
-Bird *Bird::clone() {
-    return new Bird(&name_, weight_, doesMigrate_);
 }
 
 std::string Bird::toString() {
@@ -20,6 +18,5 @@ std::string Bird::toString() {
     } else {
         result += "FALSE }";
     }
-    result += " metric = " + std::to_string(getMetric()) + " }";
     return result;
 }

@@ -29,25 +29,47 @@ public:
     double getMetric();
 
     /**
-     * Creates a clone of this creature.
-     */
-    virtual Creature *clone() = 0;
-
-    /**
      * Expresses the creature as a string.
      *
      * @return The string representation of the creature.
      */
-    virtual std::string toString();
+    virtual std::string toString() = 0;
 
     /**
-     * Overriding the "less than" operator for comparing two creatures.
+     * Overloading the "less than" operator for comparing two creatures.
      *
      * @param other The creature to compare this one to.
-     * @return True, if this creature is bigger or equal (i.e. its metric is bigger or equal)
-     * to the other one; false, otherwise.
+     * @return True, if this creature is less (i.e. its metric is less) than the other one;
+     * false, otherwise.
      */
-    bool operator<(Creature *other);
+    virtual bool operator<(Creature &other);
+
+    /**
+     * Overloading the "greater than" operator for comparing two creatures.
+     *
+     * @param other The creature to compare this one to.
+     * @return True, if this creature is greater (i.e. its metric is greater) than the other one;
+     * false, otherwise.
+     */
+    virtual bool operator>(Creature &other);
+
+    /**
+     * Overloading the "equal to" operator for comparing two creatures.
+     *
+     * @param other The creature to compare this one to.
+     * @return True, if this creature is equal (i.e. its metric is equal) to the other one;
+     * false, otherwise.
+     */
+    virtual bool operator==(Creature &other);
+
+    /**
+     * Overloading the "not equal to" operator for comparing two creatures.
+     *
+     * @param other The creature to compare this one to.
+     * @return True, if this creature is not equal (i.e. its metric is not equal) to the other one;
+     * false, otherwise.
+     */
+    virtual bool operator!=(Creature &other);
 };
 
 
