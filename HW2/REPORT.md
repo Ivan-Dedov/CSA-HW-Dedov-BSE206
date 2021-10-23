@@ -122,10 +122,6 @@ main
 │       └───creatures.generateName
 │
 │
-├───creatures.printToStd
-│   └───creature.toString
-│
-│
 ├───creatures.printToFile
 │   └───creature.toString
 │
@@ -137,10 +133,6 @@ main
 │   │
 │   ├───creatures.swap
 │   └───creatures.heapify*
-│
-│
-├───creatures.printToStd
-│   └───creature.toString
 │
 │
 └───creatures.printToFile
