@@ -1,0 +1,5 @@
+Data contains 1 elements:
+ANIMAL { name = "OneCreatureTest"; weight = 1; food_source = CARNIVORE }
+
+Sorted data contains 1 elements:
+ANIMAL { name = "OneCreatureTest"; weight = 1; food_source = CARNIVORE }

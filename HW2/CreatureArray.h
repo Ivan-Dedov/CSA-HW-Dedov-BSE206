@@ -48,13 +48,6 @@ public:
     CreatureArray();
 
     /**
-     * Retrieves the occupied length of the array of creatures.
-     *
-     * @return The number of elements inside the array.
-     */
-    int size();
-
-    /**
      * Extracts creature data from the specified file.
      *
      * @param filename The name of the file to open and read from.
@@ -76,11 +69,6 @@ public:
      * the existing content inside the file.
      */
     void printToFile(char *filename, int mode);
-
-    /**
-     * Writes the creature data into the standard output.
-     */
-    void printToStd();
 
     /**
      * Sorts the array using the heapsort algorithm (in descending order).

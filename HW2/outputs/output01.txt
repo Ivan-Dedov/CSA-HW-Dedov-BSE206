@@ -1,0 +1,15 @@
+Data contains 6 elements:
+BIRD { name = "George_The_Parrot"; weight = 400; does_migrate = FALSE }
+ANIMAL { name = "Lenny_The_Lion"; weight = 100000; food_source = CARNIVORE }
+ANIMAL { name = "Patty_The_Cat"; weight = 10000; food_source = CARNIVORE }
+ANIMAL { name = "Liam_The_Rhinoceros"; weight = 300000; food_source = HERBIVORE }
+FISH { name = "Quaily"; weight = 200; habitat = RIVER }
+BIRD { name = "Barry_Nightingale"; weight = 250; does_migrate = TRUE }
+
+Sorted data contains 6 elements:
+BIRD { name = "Barry_Nightingale"; weight = 250; does_migrate = TRUE }
+BIRD { name = "George_The_Parrot"; weight = 400; does_migrate = FALSE }
+FISH { name = "Quaily"; weight = 200; habitat = RIVER }
+ANIMAL { name = "Patty_The_Cat"; weight = 10000; food_source = CARNIVORE }
+ANIMAL { name = "Lenny_The_Lion"; weight = 100000; food_source = CARNIVORE }
+ANIMAL { name = "Liam_The_Rhinoceros"; weight = 300000; food_source = HERBIVORE }

@@ -37,23 +37,18 @@ int main(int argc, char **argv) {
         return -3;
     }
 
-
-    // Writing the data before sorting.
-    std::cout << "Original data contains " << creatures.size() << " elements:\n";
-    // According to part 3, writing the original data to both,
-    // the standard output and the specified output file.
-    creatures.printToStd();
+    // Writing the original data to the specified output file.
+    std::cout << "Retrieved creature data.\n";
     creatures.printToFile(argv[3], 0);
+    std::cout << "Printed the data to file.\n";
 
     // Sorting the creature data.
     creatures.heapSortDescending();
+    std::cout << "Creature data sorted.\n";
 
     // Writing the sorted data.
-    std::cout << "\nSorted data of " << creatures.size() << " elements:\n";
-    // Again, according to part 3, writing the original data to both,
-    // the standard output and the specified output file.
-    creatures.printToStd();
     creatures.printToFile(argv[3], 1);
+    std::cout << "Printed the sorted data to file.\n";
 
     // Measuring execution time.
     auto end_time = std::chrono::high_resolution_clock::now();

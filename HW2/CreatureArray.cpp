@@ -13,10 +13,6 @@ CreatureArray::CreatureArray() {
     size_ = 0;
 }
 
-int CreatureArray::size() {
-    return size_;
-}
-
 void CreatureArray::fillFromFile(char *filename) {
     // Opening the file.
     std::ifstream input_file;
@@ -142,12 +138,6 @@ void CreatureArray::printToFile(char *filename, int mode) {
     }
 
     output_file.close();
-}
-
-void CreatureArray::printToStd() {
-    for (int i = 0; i < size_; ++i) {
-        std::cout << data_[i]->toString() << "\n";
-    }
 }
 
 void CreatureArray::swap(int first_index, int second_index) {
