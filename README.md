@@ -13,3 +13,8 @@ Everything related to Homework 2 is inside the **HW2** folder. There is a separa
 ## Homework topic
 Statically typed programming language, object-oriented paradigm (using **C++**).
 
+# Homework 3
+Everything related to Homework 3 is inside the **HW3** folder. There is a separate ```README.md``` file for the homework. The report is inside the **HW3** folder titled ```REPORT.md```.
+
+## Homework topic
+Dynamically typed programming language (using **Python**).
