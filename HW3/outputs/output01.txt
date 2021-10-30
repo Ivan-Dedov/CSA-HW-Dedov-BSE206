@@ -1,0 +1,16 @@
+Original data contains 6 elements:
+BIRD { name = "George_The_Parrot"; weight = 400; does_migrate = False; metric = 4.28 }
+ANIMAL { name = "Lenny_The_Lion"; weight = 100000; food_source = CARNIVORE; metric = 0.01399 }
+ANIMAL { name = "Patty_The_Cat"; weight = 10000; food_source = CARNIVORE; metric = 0.1289 }
+ANIMAL { name = "Liam_The_Rhinoceros"; weight = 300000; food_source = HERBIVORE; metric = 0.006393333333333333 }
+FISH { name = "Quaily"; weight = 200; habitat = RIVER; metric = 3.145 }
+BIRD { name = "Barry_Nightingale"; weight = 250; does_migrate = True; metric = 6.948 }
+
+Sorted data contains 6 elements:
+BIRD { name = "Barry_Nightingale"; weight = 250; does_migrate = True; metric = 6.948 }
+BIRD { name = "George_The_Parrot"; weight = 400; does_migrate = False; metric = 4.28 }
+FISH { name = "Quaily"; weight = 200; habitat = RIVER; metric = 3.145 }
+ANIMAL { name = "Patty_The_Cat"; weight = 10000; food_source = CARNIVORE; metric = 0.1289 }
+ANIMAL { name = "Lenny_The_Lion"; weight = 100000; food_source = CARNIVORE; metric = 0.01399 }
+ANIMAL { name = "Liam_The_Rhinoceros"; weight = 300000; food_source = HERBIVORE; metric = 0.006393333333333333 }
+

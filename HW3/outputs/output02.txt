@@ -1,0 +1,20 @@
+Original data contains 8 elements:
+FISH { name = "^_^"; weight = 420; habitat = RIVER; metric = 0.6738095238095239 }
+BIRD { name = "<.>_<.>"; weight = 69; does_migrate = False; metric = 6.246376811594203 }
+FISH { name = "T_T"; weight = 666; habitat = LAKE; metric = 0.3948948948948949 }
+BIRD { name = "$$$"; weight = 228; does_migrate = False; metric = 0.47368421052631576 }
+FISH { name = "x"xxXXXxx"x"; weight = 47; habitat = SEA; metric = 22.382978723404257 }
+ANIMAL { name = "<[._.]>"; weight = 993; food_source = INSECTIVORE; metric = 0.49647532729103727 }
+ANIMAL { name = ">.<"; weight = 1488; food_source = OMNIVORE; metric = 0.11290322580645161 }
+BIRD { name = "O_O"; weight = 1337; does_migrate = True; metric = 0.18922961854899029 }
+
+Sorted data contains 8 elements:
+FISH { name = "x"xxXXXxx"x"; weight = 47; habitat = SEA; metric = 22.382978723404257 }
+BIRD { name = "<.>_<.>"; weight = 69; does_migrate = False; metric = 6.246376811594203 }
+FISH { name = "^_^"; weight = 420; habitat = RIVER; metric = 0.6738095238095239 }
+ANIMAL { name = "<[._.]>"; weight = 993; food_source = INSECTIVORE; metric = 0.49647532729103727 }
+BIRD { name = "$$$"; weight = 228; does_migrate = False; metric = 0.47368421052631576 }
+FISH { name = "T_T"; weight = 666; habitat = LAKE; metric = 0.3948948948948949 }
+BIRD { name = "O_O"; weight = 1337; does_migrate = True; metric = 0.18922961854899029 }
+ANIMAL { name = ">.<"; weight = 1488; food_source = OMNIVORE; metric = 0.11290322580645161 }
+

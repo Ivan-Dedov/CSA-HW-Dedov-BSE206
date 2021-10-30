@@ -1,0 +1,6 @@
+Original data contains 1 elements:
+ANIMAL { name = "A_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_long_name"; weight = 1; food_source = CARNIVORE; metric = 12084.0 }
+
+Sorted data contains 1 elements:
+ANIMAL { name = "A_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_very_long_name"; weight = 1; food_source = CARNIVORE; metric = 12084.0 }
+

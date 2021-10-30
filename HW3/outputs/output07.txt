@@ -1,0 +1,8 @@
+Original data contains 2 elements:
+ANIMAL { name = "Bear"; weight = 145000; food_source = CARNIVORE; metric = 0.0026068965517241378 }
+ANIMAL { name = "Buggy_weight"; weight = 1234567890987654321; food_source = HERBIVORE; metric = 1.014930008423919e-15 }
+
+Sorted data contains 2 elements:
+ANIMAL { name = "Bear"; weight = 145000; food_source = CARNIVORE; metric = 0.0026068965517241378 }
+ANIMAL { name = "Buggy_weight"; weight = 1234567890987654321; food_source = HERBIVORE; metric = 1.014930008423919e-15 }
+

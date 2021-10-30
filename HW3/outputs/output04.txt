@@ -1,0 +1,4 @@
+Original data contains 0 elements:
+
+Sorted data contains 0 elements:
+
