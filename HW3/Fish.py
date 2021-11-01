@@ -3,12 +3,12 @@ from Creature import Creature
 
 # The fish type of creatures.
 class Fish(Creature):
-    habitats = ['LAKE', 'RIVER', 'SEA']
+    habitats = ["LAKE", "RIVER", "SEA"]
 
-    def __init__(self, name: str, weight: int, habitat: str):
+    def __init__(self, name: str, weight: int, habitat: int):
         super().__init__(name, weight)
-        if habitat in self.habitats:
-            self.habitat = habitat
+        if 1 <= habitat <= len(self.habitats):
+            self.habitat = self.habitats[habitat - 1]
         else:
             raise Exception(f"Invalid habitat for bird {name}")
 

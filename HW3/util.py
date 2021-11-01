@@ -13,13 +13,13 @@ def get_from_file(filename: str) -> list:
             items = line.split()
             # Animal
             if int(items[2]) == 1:
-                creatures.append(Animal(items[0], int(items[1]), Animal.food_sources[int(items[3]) - 1]))
+                creatures.append(Animal(items[0], int(items[1]), int(items[3])))
             # Bird
             elif int(items[2]) == 2:
                 creatures.append(Bird(items[0], int(items[1]), items[3] != "0"))
             # Fish
             elif int(items[2]) == 3:
-                creatures.append(Fish(items[0], int(items[1]), Fish.habitats[int(items[3]) - 1]))
+                creatures.append(Fish(items[0], int(items[1]), int(items[3])))
             else:
                 raise Exception("Unknown creature.")
 

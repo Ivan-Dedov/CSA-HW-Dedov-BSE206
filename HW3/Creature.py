@@ -7,6 +7,8 @@ class Creature(ABC):
     def __init__(self, name: str, weight: int):
         self.name = name
         self.weight = weight
+        if self.weight <= 0:
+            raise Exception("Incorrect creature weight.")
 
     # Returns the metric of a creature.
     def get_metric(self) -> float:
