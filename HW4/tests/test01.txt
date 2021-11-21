@@ -1,0 +1,6 @@
+George_The_Parrot 400 2 0
+Lenny_The_Lion 100000 1 1
+Patty_The_Cat 10000 1 1
+Liam_The_Rhinoceros 300000 1 2
+Quaily 200 3 2
+Barry_Nightingale 250 2 1

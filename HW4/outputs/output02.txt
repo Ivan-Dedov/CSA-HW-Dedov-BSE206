@@ -1,0 +1,19 @@
+Data contains 8 creatures:
+FISH { name = "^_^", weight = 420, habitat = RIVER }
+BIRD { name = "<.>_<.>", weight = 69, does_migrate = FALSE }
+FISH { name = "T_T", weight = 666, habitat = LAKE }
+BIRD { name = "$$$", weight = 228, does_migrate = FALSE }
+FISH { name = "xxxXXXxxx", weight = 47, habitat = SEA }
+ANIMAL { name = "<[._.]>", weight = 993, food_source = INSECTIVORE }
+ANIMAL { name = ">.<", weight = 1488, food_source = OMNIVORE }
+BIRD { name = "O_O", weight = 1337, does_migrate = TRUE }
+
+Sorted data of 8 creatures:
+FISH { name = "xxxXXXxxx", weight = 47, habitat = SEA }
+BIRD { name = "<.>_<.>", weight = 69, does_migrate = FALSE }
+FISH { name = "^_^", weight = 420, habitat = RIVER }
+ANIMAL { name = "<[._.]>", weight = 993, food_source = INSECTIVORE }
+BIRD { name = "$$$", weight = 228, does_migrate = FALSE }
+FISH { name = "T_T", weight = 666, habitat = LAKE }
+BIRD { name = "O_O", weight = 1337, does_migrate = TRUE }
+ANIMAL { name = ">.<", weight = 1488, food_source = OMNIVORE }
