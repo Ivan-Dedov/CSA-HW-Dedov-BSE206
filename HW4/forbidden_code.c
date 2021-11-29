@@ -64,21 +64,21 @@ typedef struct creature {
     } specification;
 } creature;
 
-double get_creature_metric(creature *creature) {
+float get_creature_metric(creature *creature) {
   char *name = (*creature).name;
   size_t name_length = strlen(name);
 
-  double name_char_sum = 0;
+  float name_char_sum = 0;
   for (size_t i = 0; i < name_length; ++i) {
-    name_char_sum += (int) name[i];
+    name_char_sum += (int) name[ i ];
   }
 
   return name_char_sum / (*creature).weight;
 }
 
 int compare(creature *creature1, creature *creature2) {
-  double metric1 = get_creature_metric(creature1);
-  double metric2 = get_creature_metric(creature2);
+  float metric1 = get_creature_metric(creature1);
+  float metric2 = get_creature_metric(creature2);
 
   if (metric1 < metric2) {
     return -1;
@@ -94,9 +94,9 @@ void copy(creature *target, creature *destination) {
   // Copying the name char by char.
   size_t name_length = strlen((*target).name);
   for (size_t i = 0; i < name_length; ++i) {
-    (*destination).name[i] = (*target).name[i];
+    (*destination).name[ i ] = (*target).name[ i ];
   }
-  (*destination).name[name_length] = '\0';
+  (*destination).name[ name_length ] = '\0';
 
   // Copying everything else (since we don't want to copy references).
   (*destination).weight = (*target).weight;
@@ -111,7 +111,7 @@ void get_creature_name(char *name, int index) {
   char number[5];
   sprintf(number, "%d", index);
   for (int i = 0; i < 5; ++i) {
-    name[i] = number[i];
+    name[ i ] = number[ i ];
   }
 }
 
@@ -256,24 +256,24 @@ int read_data_from_file(char *filename, creature *creatures, int max_element_cou
 
   while (!feof(input_file) && index < max_element_count) {
     fscanf(input_file, "%s %d %d",
-           creatures[index].name,
-           &creatures[index].weight,
-           &creatures[index].creature_type);
+           creatures[ index ].name,
+           &creatures[ index ].weight,
+           &creatures[ index ].creature_type);
 
     // Incorrect weight.
-    if (creatures[index].weight <= 0) {
+    if (creatures[ index ].weight <= 0) {
       printf("Invalid weight of creature at index %d: %d. "
              "Must be an integer, at least 1.\n",
              index,
-             creatures[index].weight);
+             creatures[ index ].weight);
       exit(-11);
     }
 
-    switch (creatures[index].creature_type) {
+    switch (creatures[ index ].creature_type) {
       case 1: // Animal.
         fscanf(input_file, "%d", &input);
         if (input >= 1 && input <= 4) {
-          creatures[index].specification.animal.food_source = input;
+          creatures[ index ].specification.animal.food_source = input;
         } else {
           printf("Unknown food_source value for animal at index %d: %d. "
                  "Expected value in range from 1 to 4.\n",
@@ -284,13 +284,13 @@ int read_data_from_file(char *filename, creature *creatures, int max_element_cou
         break;
 
       case 2: // Bird.
-        fscanf(input_file, "%d", &creatures[index].specification.bird.does_migrate);
+        fscanf(input_file, "%d", &creatures[ index ].specification.bird.does_migrate);
         break;
 
       case 3: // Fish.
         fscanf(input_file, "%d", &input);
         if (input >= 1 && input <= 3) {
-          creatures[index].specification.fish.habitat = input;
+          creatures[ index ].specification.fish.habitat = input;
         } else {
           printf("Unknown habitat value for fish at index %d: %d. "
                  "Expected value in range from 1 to 3.\n",
@@ -304,7 +304,7 @@ int read_data_from_file(char *filename, creature *creatures, int max_element_cou
         printf("Invalid creature type for creature at index %d: %d. "
                "Only 1 (animal), 2 (bird), 3 (fish) are allowed.\n",
                index,
-               creatures[index].creature_type);
+               creatures[ index ].creature_type);
         exit(-14);
     }
 
@@ -321,7 +321,7 @@ int generate_randomly(creature *creatures, int count, int max_element_count) {
   int min = count < max_element_count ? count : max_element_count;
 
   for (int i = 0; i < min; ++i) {
-    creatures[i] = generate_creature(i);
+    creatures[ i ] = generate_creature(i);
   }
 
   return min;
@@ -348,7 +348,7 @@ void write_data_to_file(char *filename, creature *creatures, int count, int mode
   }
 
   for (int i = 0; i < count; ++i) {
-    print_creature_to_file(output_file, &creatures[i], i);
+    print_creature_to_file(output_file, &creatures[ i ], i);
   }
 
   fclose(output_file);
