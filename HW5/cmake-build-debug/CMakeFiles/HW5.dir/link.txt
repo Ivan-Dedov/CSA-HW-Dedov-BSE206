@@ -1,0 +1,1 @@
+/usr/bin/g++ -pthread -g CMakeFiles/HW5.dir/customer.cpp.o CMakeFiles/HW5.dir/main.cpp.o -o HW5 

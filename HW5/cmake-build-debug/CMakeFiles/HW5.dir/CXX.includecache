@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Studies/CSA/HW5/customer.h
+string
+-
+
+/mnt/c/Studies/CSA/HW5/main.cpp
+iostream
+-
+string
+-
+vector
+-
+queue
+-
+pthread.h
+-
+unistd.h
+-
+semaphore.h
+-
+customer.h
+/mnt/c/Studies/CSA/HW5/customer.h
+
