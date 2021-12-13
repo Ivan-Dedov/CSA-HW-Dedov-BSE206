@@ -20,10 +20,10 @@ Customer *Customer::createCustomer(int number_of_queues) {
     customer->queue_number = rand() % number_of_queues;
 
     // Sleep between 1 and 5 seconds.
-    customer->checkout_time = rand() % 500000 + 100000;
+    customer->checkout_time = rand() % 5000000 + 1000000;
 
     // Creating a customer "took some time" - between 1 and 3 seconds.
-    usleep(rand() % 300000 + 100000);
+    usleep(rand() % 3000000 + 1000000);
 
     return customer;
 };
